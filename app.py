@@ -12,6 +12,8 @@ def index():
 		word=d["code"]
 		if d["buttonName"] == "Get ready to complie":
 			buttonName = "Show outPut"
+		else:
+			buttonName = "Get ready to complie"
 		file1.write(word)
 		file1.close()
 		outPut = startCode()
