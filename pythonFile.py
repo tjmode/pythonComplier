@@ -1,0 +1,3 @@
+def startCode():
+    return "HY"
+         

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <!-- sidebar -->
+    <aside class="sidebar">
+        <a href="#" class="logo">LOGO</a>
+        <ul id="accordion" class="accordion">
+            <li>
+                <div class="link"><i class="fa fa-database"></i>Web Design</div>
+
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-code"></i>Coding</div>
+
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-mobile"></i>Devices</div>
+
+            </li>
+            <li>
+                <div class="link"><i class="fa fa-globe"></i>Global</div>
+                <ul class="submenu">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Bing</a></li>
+                    <li><a href="#">Yahoo</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- right side header,tab,grid -->
+    <section>
+        <header>
+            <ul class="notify-profile padd-left">
+                <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="#"><img src="images/profile.jpg" alt=""> Notification <i class="fa fa-angle-down"
+                            aria-hidden="true"></i>
+                    </a>
+
+                </li>
+            </ul>
+        </header>
+
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Working demo of complier</h5>
+                <form class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <h4>Description</h4>
+                            <p>Working demo of complier</p>
+                        </div>
+                        <div class="form-group">
+                            <h4>Input</h4>
+                            <p>Working demo of complier,</p>
+                        </div>
+
+                        <div class="form-group">
+                            <h4>Output</h4>
+                            <p>Working demo of complier</p>
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Sample Input 1</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter title" Required>
+                        </div>
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Sample Output 2</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter title" Required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card code-compiler">
+            <div class="card-body">
+    <form action = "/result" method = "POST">
+        {% if word == "" %}
+         <textarea name="code" rows="10" cols="150">
+def startCode():
+    return "HY"
+         </textarea>
+         {% else %}
+         <textarea name="code" rows="10" cols="150">{{word}}</textarea>
+         {% endif %}
+         <p><input name= "buttonName" type = "submit" value = "{{buttonName}}" /></p>
+    </form>
+            </div>
+        </div>
+
+                <div class="card code-compiler">
+            <div class="card-body">
+                            <div class="form-group">
+                            <h4>Output</h4>
+                            <p>{{outPut}}</p>
+                        </div>
+            </div>
+        </div>
+</section>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"> </script>
+</body>
+
+</html>
